@@ -11,6 +11,8 @@ import { MainMenuComponent } from './common/main-menu/main-menu.component';
 import { TopMenuComponent } from './common/top-menu/top-menu.component';
 import { SearchFilterPipe } from './common/main-menu/search-filter.pipe';
 
+import ngdoc from 'json!../ng-api-doc.json';
+
 // will be lazy loaded later
 import { DemoAccordionModule } from './components/accordion';
 import { DemoAlertsModule } from './components/alerts';
@@ -27,6 +29,7 @@ import { DemoTabsModule } from './components/tabs';
 import { DemoTimepickerModule } from './components/timepicker/index';
 import { DemoTooltipModule } from './components/tooltip/index';
 import { DemoTypeaheadModule } from './components/typeahead/index';
+import { NgApiDocModule } from './api-docs/index';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { DemoTypeaheadModule } from './components/typeahead/index';
     SearchFilterPipe
   ],
   imports: [
+    NgApiDocModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes, {useHash: true}),
@@ -57,6 +61,9 @@ import { DemoTypeaheadModule } from './components/typeahead/index';
     DemoTooltipModule,
     DemoTypeaheadModule
   ],
+  providers: [
+      {provide: NgApiDoc, useValue: ngdoc}
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
