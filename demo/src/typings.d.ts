@@ -14,7 +14,7 @@ declare module jasmine {
     toHaveCssClass(expected: any): boolean;
   }
 // Some do it the other way around.
-declare module 'json!*' {
+declare module '!!json!*' {
   const value: any;
   export default value;
 }
