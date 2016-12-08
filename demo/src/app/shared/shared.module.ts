@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { DemoSectionComponent } from './demo-section/demo-section.component';
+import { CommonModule } from '@angular/common';
 import { TabsModule } from 'ng2-bootstrap';
+import { DemoSectionComponent } from './demo-section/demo-section.component';
 
 @NgModule({
   declarations: [DemoSectionComponent],
