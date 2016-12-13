@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ng-sample-box',
-  templateUrl: 'sample-box.component.html'
+  templateUrl: './sample-box.component.html'
 })
 export class SampleBoxComponent {
   @Input() public ts: string;

@@ -5,7 +5,7 @@ import { DemoSectionComponent } from './demo-section/demo-section.component';
 
 @NgModule({
   declarations: [DemoSectionComponent],
-  imports: [TabsModule.forRoot()],
+  imports: [TabsModule.forRoot(), CommonModule],
   exports: [DemoSectionComponent]
 })
 export class SharedModule {
