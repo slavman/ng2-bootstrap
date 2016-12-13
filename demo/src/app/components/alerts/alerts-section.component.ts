@@ -6,11 +6,14 @@ let titleDoc = require('html!markdown!./docs/title.md');
 
 @Component({
   selector: 'alert-section',
+  // tslint:disable-next-line
+  host: {'class': 'col-md-9'},
   template: `
     <demo-section [name]="name" [src]="src" [titleDoc]="titleDoc">
       <!-- basic -->
       <p>Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the four <strong>required</strong> contextual classes (e.g., <code class="highlighter-rouge">.alert-success</code>). For inline dismissal, use the <a href="#dismissing"><code>dismiss property</code></a>.</p>
-      <ng-sample-box [ts]="demos.basic.component" [html]="demos.old.html">
+      
+      <ng-sample-box [ts]="demos.basic.component" [html]="demos.basic.html">
         <ui-alert-basic></ui-alert-basic>
       </ng-sample-box>
       
